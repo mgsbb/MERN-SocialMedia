@@ -1,0 +1,234 @@
+.header {
+	width: 100vw;
+	height: 10vh;
+	background-color: black;
+	color: rgba(255, 255, 255, 0.7);
+
+	font-family: 'Roboto';
+	font-weight: 700;
+	/* text-transform: uppercase; */
+	font-size: 1.5rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+	top: 0;
+	z-index: 100;
+}
+
+.nav {
+	width: 75%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-logo-link {
+	text-decoration: none;
+	color: white;
+}
+
+/* .nav-list {
+  list-style-type: none;
+} */
+
+.nav-right-container {
+	display: flex;
+	max-width: 500px;
+	width: 50%;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 40px;
+}
+
+.nav-list-item {
+	display: inline-block;
+	margin: 0 1rem;
+}
+
+.nav-list-link {
+	text-decoration: none;
+	color: white;
+}
+
+.logout-btn {
+	width: 90px;
+	height: 5vh;
+	border: none;
+	border-radius: 1rem;
+	cursor: pointer;
+
+	background: linear-gradient(
+		rgba(255, 255, 255, 0.7),
+		rgba(255, 255, 255, 0.9)
+	);
+
+	font-family: 'Roboto';
+	font-weight: 700;
+}
+
+.lg-hide {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	.sm-hide {
+		display: none;
+	}
+
+	.lg-hide {
+		display: block;
+	}
+}
+
+/* ================================== Nav dropdown ================================== */
+
+.hamburg-icon {
+	font-size: 2.5rem;
+	cursor: pointer;
+}
+
+.nav-dropdown {
+	position: fixed;
+	top: 10vh;
+	left: 0;
+	width: 100vw;
+	height: 20vh;
+
+	border-top: 2px solid rgba(255, 255, 255, 0.2);
+	background-color: rgba(0, 0, 0, 0.8);
+
+	transform: translateY(0);
+	transition: transform 0.5s ease-in-out;
+}
+
+.dropdown-contents {
+	height: 100%;
+
+	display: flex !important;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.hide-dropdown {
+	/* still not setting dislpay to none */
+	transform: translateY(-300px);
+}
+
+@media screen and (min-width: 768px) {
+	/* translates as soon as 768px is reached */
+	.nav-dropdown {
+		transform: translateY(-200px);
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.nav-dropdown {
+		display: none;
+	}
+}
+
+/* ================================== Search ================================== */
+
+/* On navbar */
+.search-btn {
+	width: 10% !important;
+	color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.search-box {
+	position: fixed;
+	top: 10vh;
+	z-index: 200;
+	height: 20vh;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+	transform: translate(0, 0);
+	display: block;
+	transition: transform 0.5s ease-in-out, display 1s ease-in;
+}
+
+.search-box-hide {
+	transform: translate(0, -50vh);
+	/* display: none; */
+}
+
+.search-box-close {
+	position: fixed;
+	right: 0;
+
+	color: rgba(255, 255, 255, 0.7);
+	background: transparent !important;
+	width: 5% !important;
+	height: 0;
+}
+
+/* Not in use */
+.search-heading {
+	color: rgba(255, 255, 255, 0.7);
+	padding: 1rem;
+
+	text-align: center;
+}
+
+.input-group-flex {
+	display: flex;
+	justify-content: space-evenly;
+	gap: 2rem;
+
+	padding: 3rem;
+
+	margin-top: 3rem;
+}
+
+.search-input {
+	background-color: rgba(255, 255, 255, 0.2) !important;
+	max-width: 500px !important;
+	width: 100% !important;
+	border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.search-input-select {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.search-input-option {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.go-button {
+	width: 100%;
+	height: 5vh;
+
+	position: absolute;
+	bottom: 0;
+
+	border-radius: 0 !important;
+}
+
+.go-button:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+	.search-box {
+		height: 30vh;
+	}
+
+	.input-group-flex {
+		flex-direction: column;
+	}
+}
