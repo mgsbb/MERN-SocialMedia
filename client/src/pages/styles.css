@@ -1,0 +1,419 @@
+/* =========================================================================== */
+/* Auth */
+/* =========================================================================== */
+
+.password {
+	display: inline;
+	width: 90% !important;
+}
+
+.show-password-icon {
+	float: right;
+
+	background: none;
+	color: rgba(255, 255, 255, 0.5);
+	border: none;
+	font-size: 3rem;
+
+	cursor: pointer;
+}
+
+.google-icon {
+	margin-right: 1rem;
+}
+
+.auth-failure-message {
+	color: red;
+}
+
+/* =========================================================================== */
+/* CreateForm */
+/* =========================================================================== */
+
+.create-form-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.back-home-container {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin: 2rem;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: grey;
+	cursor: pointer;
+}
+
+.back-home-container:hover {
+	background-color: black;
+}
+
+.tags {
+	display: inline;
+	font-size: 1.5rem;
+}
+
+/* =========================================================================== */
+/* DetailedPost */
+/* =========================================================================== */
+
+.post-not-found {
+	height: 100vh;
+	font-size: 10rem;
+	color: rgba(255, 255, 255, 0.5);
+	text-align: center;
+}
+
+.back-home-btn-container {
+	display: flex;
+	justify-content: center;
+}
+
+.back-home-btn {
+	position: fixed;
+	top: 65vh;
+	max-width: 400px;
+	width: 90% !important;
+	height: auto;
+	display: block !important;
+	margin: 0 auto;
+	color: rgba(255, 255, 255, 0.5) !important;
+}
+
+@media screen and (max-width: 800px) {
+	.post-not-found {
+		font-size: 5rem;
+	}
+}
+
+.lg-card-container {
+	width: 75vw;
+
+	background-color: rgba(0, 0, 0, 0.4);
+	color: rgba(255, 255, 255, 0.7);
+
+	margin-top: 15vh;
+	margin-bottom: 5vh;
+	border-radius: 2rem;
+}
+
+.lg-card-img {
+	width: 100%;
+	height: 80vh;
+	border-radius: 2rem 2rem 0 0;
+
+	background-size: cover;
+	background-position: center;
+}
+
+.lg-card-img-overlay {
+	height: 100%;
+	border-radius: inherit;
+}
+
+.lg-card-img-overlay:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.lg-card-back-home {
+	color: rgba(0, 0, 0, 0.4);
+	background: rgba(255, 255, 255, 0.5);
+	border: none;
+	border-radius: 50%;
+	width: 5rem;
+	height: 5rem;
+	cursor: pointer;
+	margin: 1rem 0 0 1rem;
+}
+
+.lg-card-bottom {
+	width: 100%;
+	height: 50%;
+	padding: 2rem;
+}
+
+.lg-card-top-row {
+	display: flex;
+	justify-content: space-between;
+	gap: 2rem;
+}
+
+.lg-card-date-time {
+	display: flex;
+	gap: 2rem;
+}
+
+.lg-card-edit-delete {
+	display: flex;
+	gap: 2rem;
+}
+
+.lg-card-title {
+	width: 100%;
+	font-size: 5rem;
+	margin-top: 2rem;
+	word-wrap: break-word;
+}
+
+.lg-card-desc {
+	font-size: 2rem;
+	margin-top: 2rem;
+	word-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+	.lg-card-top-row {
+		font-size: 1rem;
+	}
+
+	.lg-card-img {
+		height: 40vh;
+	}
+}
+
+@media screen and (max-width: 426px) {
+	.lg-card-top-row {
+		flex-direction: column-reverse;
+	}
+}
+
+/* =========================================================================== */
+/* ErrorPage */
+/* =========================================================================== */
+
+.error-display {
+	font-size: 20rem;
+	width: 100vw;
+	height: 100vh;
+
+	color: rgba(255, 255, 255, 0.4);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.error-message {
+	font-size: 5rem;
+}
+
+@media screen and (max-width: 430px) {
+	.error-display {
+		font-size: 10rem;
+	}
+
+	.error-message {
+		font-size: 2.5rem;
+	}
+}
+
+/* =========================================================================== */
+/* Home */
+/* =========================================================================== */
+
+.home-bg {
+	/* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../assets/images/bg2.jpg');
+  background-size: cover; */
+
+	/* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)); */
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+}
+
+.grid-container {
+	margin: 15vh auto 5vh;
+	width: 75vw;
+
+	--cardItemWidth: calc((75vw - 6vw) / 4);
+
+	/* border: 1px solid black;
+  border-radius: 1rem; */
+
+	display: grid;
+	grid-template-columns:
+		var(--cardItemWidth) var(--cardItemWidth) var(--cardItemWidth)
+		var(--cardItemWidth);
+
+	/* works with --cardItemWidth: calc((75vw - 4vw) / 4) */
+	/* column-gap: 2rem; */
+
+	column-gap: 2vw;
+	row-gap: 4rem;
+}
+
+/* ======================== PLUS ICON ======================== */
+.plus-icon-container {
+	position: fixed;
+	right: 1vw;
+	bottom: 1vh;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: none;
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	cursor: pointer;
+}
+
+/* !!---- Not in use ----!! */
+.plus-icon-container-center {
+	width: 200px;
+	height: 200px;
+	right: calc((100vw - 200px) / 2);
+	bottom: calc((100vh - 200px) / 2);
+	font-size: 2rem;
+}
+
+.plus-icon {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 4rem;
+}
+
+/* !!---- Not in use ----!! */
+.plus-icon-2 {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 8rem;
+}
+
+/* ======================== HERO TEXT ======================== */
+
+/* !!---- Not in use ----!! */
+.add-hero-text {
+	position: fixed;
+	width: 100%;
+	top: 70vh;
+	font-size: 3rem;
+	color: rgba(255, 255, 255, 0.7);
+
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.no-posts-text {
+	width: 100vw;
+	text-align: center;
+	font-size: 10rem;
+	height: 20vh;
+
+	color: rgba(255, 255, 255, 0.5);
+
+	position: fixed;
+	top: 40vh;
+}
+
+.add-text {
+	position: fixed;
+	right: 2vw;
+	bottom: 16vh;
+	font-size: 4rem;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.search-results-text {
+	color: rgba(255, 255, 255, 0.5);
+	text-align: center;
+	font-size: 5rem;
+	margin-top: 15vh;
+	background-color: red;
+	/* text is being overflown */
+	height: 0;
+}
+
+.guest-user-message {
+	width: 80vw;
+	height: 6vh;
+	position: fixed;
+	bottom: 0;
+	left: 10vw;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: rgba(255, 255, 255, 0.5);
+	text-align: center;
+	font-weight: bold;
+}
+
+@media screen and (min-width: 750px) {
+	.guest-user-message {
+		width: 60vw;
+		left: 20vw;
+		height: 3vh;
+	}
+}
+
+/* ======================== MEDIA QUERIES ======================== */
+
+@media screen and (max-width: 1120px) {
+	.grid-container {
+		--cardItemWidth: calc((75vw - 2vw) / 2);
+		display: grid;
+		grid-template-columns: var(--cardItemWidth) var(--cardItemWidth);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.grid-container {
+		display: grid;
+		grid-template-columns: auto;
+	}
+
+	.no-posts-text {
+		font-size: 5rem;
+	}
+}
+
+/* =========================================================================== */
+/* SharedLayout */
+/* =========================================================================== */
+
+/* =========================================================================== */
+/* User */
+/* =========================================================================== */
+
+.user-details {
+	display: inline;
+}
+
+/* =========================================================================== */
+/* Welcome */
+/* =========================================================================== */
+
+.hero {
+	margin-top: 20rem;
+	font-size: 20rem;
+	color: rgba(255, 255, 255, 0.5);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.get-started-btn-container {
+	max-width: 500px;
+	width: 50% !important;
+	height: 8rem !important;
+	border-radius: 100px !important;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+.get-started-btn {
+	font-size: 2rem;
+	background: transparent;
+	border: none;
+	color: grey;
+	text-transform: uppercase;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+	.hero {
+		font-size: 10rem;
+	}
+}
