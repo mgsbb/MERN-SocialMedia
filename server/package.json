@@ -5,7 +5,11 @@
     "main": "index.js",
     "scripts": {
         "dev": "nodemon --exec ts-node src/server.ts",
-        "build": "tsc",
+        "build-server": "tsc",
+        "build-client": "cd .. && cd client && npm run build",
+        "install-server": "npm install",
+        "install-client": "cd .. && cd client && npm install",
+        "setup-production": "npm run install-client && npm run build-client && npm run install-server && npm run build-server",
         "start": "node dist/server.js"
     },
     "keywords": [],
